@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timesheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <!-- moment link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- jQuery Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    
+</head>
+<body>
+    <!-- Employee Tracker -->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: black; color: white">
+      <h1 class="text-center">College Station Train Schedule</h1>
+      <h3 class="text-center">Take a train from the heart of Texas</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add Employee  -->
+        <div class="card mb-4 p-4">
+          <div class="card-body">
+            <h3 class="card-title text-left">Add Train</h3>
+            <!-- Entry Form -->
+            <form>
+              <div class="form-group row">
+                <label for="employee-name-input">Train Name</label>
+                <input class="form-control" id="employee-name-input" placeholder="Thomas the Tank Engine" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="role-input">Destination</label>
+                <input class="form-control" id="role-input" placeholder="Amarillo" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="start-input">First Train Time (Military Time)</label>
+                <input class="form-control" id="start-input" placeholder="01/08/1989" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="rate-input">Frequency (min)</label>
+                <input class="form-control" id="rate-input" placeholder="200000" type="text">
+              </div>
+              <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- Current Employees-->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Current Schedule</h3>
+            <table class="table table-sm table-hover" id='employee-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destined For</th>
+                  <th scope="col">Frequency (Min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
