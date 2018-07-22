@@ -6,9 +6,7 @@ var currentTime = "";
 var diffTime = "";
 var tRemain = "";
 var minsTillTrain = "";
-var key = "";
-var getKey = "";
-var minsTillTrain = "";
+
 
 var config = {
     apiKey: "AIzaSyDiwJaKWgughh_TS280A9AET2tPNBwd1cY",
@@ -39,7 +37,7 @@ var config = {
       nextTrain = moment().add(minsTillTrain, "minutes");
       nextTrainFormatted = moment(nextTrain).format("hh:mm");
 
-      key = database.ref().push({
+      database.ref().push({
         TrainName: tempTrainName,
         Destination: tempDestination,
         Time: tempTime,
