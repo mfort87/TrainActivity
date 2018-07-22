@@ -76,5 +76,5 @@ var config = {
         row.append(newEntry5);
         $("tbody").append(row);
 
-
+// need to add ability to delete here but don't know what needs to be done to do so
   })
